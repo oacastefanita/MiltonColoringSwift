@@ -8,9 +8,35 @@
 
 /* Begin PBXBuildFile section */
 		71F7BC78C70AFF4996DCEBC5 /* Pods_Milton_Coloring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2874533AAA954BBE25B463E2 /* Pods_Milton_Coloring.framework */; };
-		A2F110E62C2EBFCE00F69E24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F110E52C2EBFCE00F69E24 /* AppDelegate.swift */; };
+		A2395A552C2ECC3D00B85FF2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A382C2ECC3C00B85FF2 /* SettingsViewController.swift */; };
+		A2395A562C2ECC3D00B85FF2 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A392C2ECC3C00B85FF2 /* SplashViewController.swift */; };
+		A2395A572C2ECC3D00B85FF2 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A3A2C2ECC3C00B85FF2 /* StatisticsViewController.swift */; };
+		A2395A582C2ECC3D00B85FF2 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A3B2C2ECC3C00B85FF2 /* MainMenuViewController.swift */; };
+		A2395A592C2ECC3D00B85FF2 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A3C2C2ECC3C00B85FF2 /* Extensions.swift */; };
+		A2395A5A2C2ECC3D00B85FF2 /* ResourceWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A3E2C2ECC3D00B85FF2 /* ResourceWebViewViewController.swift */; };
+		A2395A5B2C2ECC3D00B85FF2 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A3F2C2ECC3D00B85FF2 /* Animation.swift */; };
+		A2395A5D2C2ECC3D00B85FF2 /* MiltonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A412C2ECC3D00B85FF2 /* MiltonButton.swift */; };
+		A2395A602C2ECC3D00B85FF2 /* SpriteSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A442C2ECC3D00B85FF2 /* SpriteSheet.swift */; };
+		A2395A612C2ECC3D00B85FF2 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A452C2ECC3D00B85FF2 /* Translation.swift */; };
+		A2395A622C2ECC3D00B85FF2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A472C2ECC3D00B85FF2 /* Api.swift */; };
+		A2395A632C2ECC3D00B85FF2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A482C2ECC3D00B85FF2 /* APIClient.swift */; };
+		A2395A642C2ECC3D00B85FF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A492C2ECC3D00B85FF2 /* AppDelegate.swift */; };
+		A2395A652C2ECC3D00B85FF2 /* AnalyticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A4B2C2ECC3D00B85FF2 /* AnalyticsController.swift */; };
+		A2395A662C2ECC3D00B85FF2 /* AppsFlyerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A4C2C2ECC3D00B85FF2 /* AppsFlyerController.swift */; };
+		A2395A672C2ECC3D00B85FF2 /* AssetsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A4D2C2ECC3D00B85FF2 /* AssetsManager.swift */; };
+		A2395A682C2ECC3D00B85FF2 /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A4E2C2ECC3D00B85FF2 /* Constraints.swift */; };
+		A2395A692C2ECC3D00B85FF2 /* ExperimentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A4F2C2ECC3D00B85FF2 /* ExperimentsController.swift */; };
+		A2395A6A2C2ECC3D00B85FF2 /* InAppPurchases.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A502C2ECC3D00B85FF2 /* InAppPurchases.swift */; };
+		A2395A6B2C2ECC3D00B85FF2 /* PurchasesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A512C2ECC3D00B85FF2 /* PurchasesController.swift */; };
+		A2395A6C2C2ECC3D00B85FF2 /* SoundsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A522C2ECC3D00B85FF2 /* SoundsController.swift */; };
+		A2395A6D2C2ECC3D00B85FF2 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */; };
+		A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */; };
+		A2400AC92C4EA4CE003B4018 /* ColoringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */; };
+		A24C5A3E2C493D0800533D88 /* ColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5A3D2C493D0800533D88 /* ColoringView.swift */; };
+		A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */; };
+		A2BB93D22C3FCEBD0024CCAF /* ColoringPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */; };
+		A2BB93D52C4016D60024CCAF /* ColoringPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */; };
 		A2F110E82C2EBFCE00F69E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */; };
-		A2F110EA2C2EBFCE00F69E24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F110E92C2EBFCE00F69E24 /* ViewController.swift */; };
 		A2F110ED2C2EBFCE00F69E24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EC2C2EBFCE00F69E24 /* Base */; };
 		A2F110EF2C2EBFCF00F69E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EE2C2EBFCF00F69E24 /* Assets.xcassets */; };
 		A2F110F22C2EBFCF00F69E24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A2F110F12C2EBFCF00F69E24 /* Base */; };
@@ -19,10 +45,36 @@
 /* Begin PBXFileReference section */
 		2874533AAA954BBE25B463E2 /* Pods_Milton_Coloring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Milton_Coloring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6123C984AC1B514FB5777390 /* Pods-Milton-Coloring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Milton-Coloring.debug.xcconfig"; path = "Target Support Files/Pods-Milton-Coloring/Pods-Milton-Coloring.debug.xcconfig"; sourceTree = "<group>"; };
+		A2395A382C2ECC3C00B85FF2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		A2395A392C2ECC3C00B85FF2 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		A2395A3A2C2ECC3C00B85FF2 /* StatisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		A2395A3B2C2ECC3C00B85FF2 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		A2395A3C2C2ECC3C00B85FF2 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A2395A3E2C2ECC3D00B85FF2 /* ResourceWebViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceWebViewViewController.swift; sourceTree = "<group>"; };
+		A2395A3F2C2ECC3D00B85FF2 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		A2395A412C2ECC3D00B85FF2 /* MiltonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiltonButton.swift; sourceTree = "<group>"; };
+		A2395A442C2ECC3D00B85FF2 /* SpriteSheet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpriteSheet.swift; sourceTree = "<group>"; };
+		A2395A452C2ECC3D00B85FF2 /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
+		A2395A472C2ECC3D00B85FF2 /* Api.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		A2395A482C2ECC3D00B85FF2 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		A2395A492C2ECC3D00B85FF2 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A2395A4B2C2ECC3D00B85FF2 /* AnalyticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsController.swift; sourceTree = "<group>"; };
+		A2395A4C2C2ECC3D00B85FF2 /* AppsFlyerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsFlyerController.swift; sourceTree = "<group>"; };
+		A2395A4D2C2ECC3D00B85FF2 /* AssetsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsManager.swift; sourceTree = "<group>"; };
+		A2395A4E2C2ECC3D00B85FF2 /* Constraints.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constraints.swift; sourceTree = "<group>"; };
+		A2395A4F2C2ECC3D00B85FF2 /* ExperimentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperimentsController.swift; sourceTree = "<group>"; };
+		A2395A502C2ECC3D00B85FF2 /* InAppPurchases.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InAppPurchases.swift; sourceTree = "<group>"; };
+		A2395A512C2ECC3D00B85FF2 /* PurchasesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasesController.swift; sourceTree = "<group>"; };
+		A2395A522C2ECC3D00B85FF2 /* SoundsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsController.swift; sourceTree = "<group>"; };
+		A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
+		A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringBook.swift; sourceTree = "<group>"; };
+		A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewModel.swift; sourceTree = "<group>"; };
+		A24C5A3D2C493D0800533D88 /* ColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringView.swift; sourceTree = "<group>"; };
+		A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewController.swift; sourceTree = "<group>"; };
+		A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanel.swift; sourceTree = "<group>"; };
+		A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColoringPanel.xib; sourceTree = "<group>"; };
 		A2F110E22C2EBFCE00F69E24 /* Milton-Coloring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milton-Coloring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A2F110E52C2EBFCE00F69E24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A2F110E92C2EBFCE00F69E24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A2F110EC2C2EBFCE00F69E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2F110EE2C2EBFCF00F69E24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2F110F12C2EBFCF00F69E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +104,73 @@
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
+		A2395A3D2C2ECC3C00B85FF2 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A2395A3C2C2ECC3C00B85FF2 /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A2395A462C2ECC3D00B85FF2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2395A3F2C2ECC3D00B85FF2 /* Animation.swift */,
+				A2395A412C2ECC3D00B85FF2 /* MiltonButton.swift */,
+				A2395A442C2ECC3D00B85FF2 /* SpriteSheet.swift */,
+				A2395A452C2ECC3D00B85FF2 /* Translation.swift */,
+				A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A2395A4A2C2ECC3D00B85FF2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A2395A472C2ECC3D00B85FF2 /* Api.swift */,
+				A2395A482C2ECC3D00B85FF2 /* APIClient.swift */,
+				A2395A492C2ECC3D00B85FF2 /* AppDelegate.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		A2395A542C2ECC3D00B85FF2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A2395A4A2C2ECC3D00B85FF2 /* API */,
+				A2395A4B2C2ECC3D00B85FF2 /* AnalyticsController.swift */,
+				A2395A4C2C2ECC3D00B85FF2 /* AppsFlyerController.swift */,
+				A2395A4D2C2ECC3D00B85FF2 /* AssetsManager.swift */,
+				A2395A4E2C2ECC3D00B85FF2 /* Constraints.swift */,
+				A2395A4F2C2ECC3D00B85FF2 /* ExperimentsController.swift */,
+				A2395A502C2ECC3D00B85FF2 /* InAppPurchases.swift */,
+				A2395A512C2ECC3D00B85FF2 /* PurchasesController.swift */,
+				A2395A522C2ECC3D00B85FF2 /* SoundsController.swift */,
+				A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A24C5A3C2C493CF800533D88 /* ColoringView */ = {
+			isa = PBXGroup;
+			children = (
+				A24C5A3D2C493D0800533D88 /* ColoringView.swift */,
+				A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */,
+			);
+			path = ColoringView;
+			sourceTree = "<group>";
+		};
+		A2BB93D32C4016BD0024CCAF /* Coloring */ = {
+			isa = PBXGroup;
+			children = (
+				A24C5A3C2C493CF800533D88 /* ColoringView */,
+				A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */,
+				A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */,
+				A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */,
+			);
+			path = Coloring;
+			sourceTree = "<group>";
+		};
 		A2F110D92C2EBFCE00F69E24 = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +192,16 @@
 		A2F110E42C2EBFCE00F69E24 /* Milton-Coloring */ = {
 			isa = PBXGroup;
 			children = (
-				A2F110E52C2EBFCE00F69E24 /* AppDelegate.swift */,
+				A2395A3D2C2ECC3C00B85FF2 /* Utils */,
+				A2395A462C2ECC3D00B85FF2 /* Models */,
+				A2395A542C2ECC3D00B85FF2 /* Controllers */,
+				A2BB93D32C4016BD0024CCAF /* Coloring */,
 				A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */,
-				A2F110E92C2EBFCE00F69E24 /* ViewController.swift */,
+				A2395A392C2ECC3C00B85FF2 /* SplashViewController.swift */,
+				A2395A3B2C2ECC3C00B85FF2 /* MainMenuViewController.swift */,
+				A2395A3E2C2ECC3D00B85FF2 /* ResourceWebViewViewController.swift */,
+				A2395A382C2ECC3C00B85FF2 /* SettingsViewController.swift */,
+				A2395A3A2C2ECC3C00B85FF2 /* StatisticsViewController.swift */,
 				A2F110EB2C2EBFCE00F69E24 /* Main.storyboard */,
 				A2F110EE2C2EBFCF00F69E24 /* Assets.xcassets */,
 				A2F110F02C2EBFCF00F69E24 /* LaunchScreen.storyboard */,
@@ -156,6 +282,7 @@
 				A2F110EF2C2EBFCF00F69E24 /* Assets.xcassets in Resources */,
 				A2F110F22C2EBFCF00F69E24 /* Base in Resources */,
 				A2F110ED2C2EBFCE00F69E24 /* Base in Resources */,
+				A2BB93D52C4016D60024CCAF /* ColoringPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,9 +352,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2F110EA2C2EBFCE00F69E24 /* ViewController.swift in Sources */,
-				A2F110E62C2EBFCE00F69E24 /* AppDelegate.swift in Sources */,
+				A2395A6A2C2ECC3D00B85FF2 /* InAppPurchases.swift in Sources */,
+				A2395A652C2ECC3D00B85FF2 /* AnalyticsController.swift in Sources */,
+				A2395A6C2C2ECC3D00B85FF2 /* SoundsController.swift in Sources */,
+				A2395A6D2C2ECC3D00B85FF2 /* StatisticsController.swift in Sources */,
+				A2395A642C2ECC3D00B85FF2 /* AppDelegate.swift in Sources */,
+				A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */,
 				A2F110E82C2EBFCE00F69E24 /* SceneDelegate.swift in Sources */,
+				A2400AC92C4EA4CE003B4018 /* ColoringViewModel.swift in Sources */,
+				A2395A592C2ECC3D00B85FF2 /* Extensions.swift in Sources */,
+				A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */,
+				A2395A6B2C2ECC3D00B85FF2 /* PurchasesController.swift in Sources */,
+				A2395A622C2ECC3D00B85FF2 /* Api.swift in Sources */,
+				A2395A672C2ECC3D00B85FF2 /* AssetsManager.swift in Sources */,
+				A2395A602C2ECC3D00B85FF2 /* SpriteSheet.swift in Sources */,
+				A2395A5D2C2ECC3D00B85FF2 /* MiltonButton.swift in Sources */,
+				A2395A5A2C2ECC3D00B85FF2 /* ResourceWebViewViewController.swift in Sources */,
+				A2395A662C2ECC3D00B85FF2 /* AppsFlyerController.swift in Sources */,
+				A2395A692C2ECC3D00B85FF2 /* ExperimentsController.swift in Sources */,
+				A2395A572C2ECC3D00B85FF2 /* StatisticsViewController.swift in Sources */,
+				A24C5A3E2C493D0800533D88 /* ColoringView.swift in Sources */,
+				A2395A682C2ECC3D00B85FF2 /* Constraints.swift in Sources */,
+				A2BB93D22C3FCEBD0024CCAF /* ColoringPanel.swift in Sources */,
+				A2395A582C2ECC3D00B85FF2 /* MainMenuViewController.swift in Sources */,
+				A2395A612C2ECC3D00B85FF2 /* Translation.swift in Sources */,
+				A2395A552C2ECC3D00B85FF2 /* SettingsViewController.swift in Sources */,
+				A2395A5B2C2ECC3D00B85FF2 /* Animation.swift in Sources */,
+				A2395A562C2ECC3D00B85FF2 /* SplashViewController.swift in Sources */,
+				A2395A632C2ECC3D00B85FF2 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +536,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Milton-Coloring/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Milton Coloring";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We need this permission to ensure we can personalize your experience, but we don't store any data about you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -393,7 +546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.werockapps.Milton-Coloring";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -418,6 +571,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Milton-Coloring/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Milton Coloring";
+				INFOPLIST_KEY_NSUserTrackingUsageDescription = "We need this permission to ensure we can personalize your experience, but we don't store any data about you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -427,7 +581,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 2.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.werockapps.Milton-Coloring";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

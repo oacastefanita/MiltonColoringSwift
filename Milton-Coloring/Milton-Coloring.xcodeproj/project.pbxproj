@@ -31,11 +31,9 @@
 		A2395A6C2C2ECC3D00B85FF2 /* SoundsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A522C2ECC3D00B85FF2 /* SoundsController.swift */; };
 		A2395A6D2C2ECC3D00B85FF2 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */; };
 		A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */; };
-		A2400AC92C4EA4CE003B4018 /* ColoringViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */; };
-		A24C5A3E2C493D0800533D88 /* ColoringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5A3D2C493D0800533D88 /* ColoringView.swift */; };
+		A2400AC92C4EA4CE003B4018 /* ColoringPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */; };
+		A24C5A3E2C493D0800533D88 /* ColoringPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */; };
 		A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */; };
-		A2BB93D22C3FCEBD0024CCAF /* ColoringPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */; };
-		A2BB93D52C4016D60024CCAF /* ColoringPanel.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */; };
 		A2F110E82C2EBFCE00F69E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */; };
 		A2F110ED2C2EBFCE00F69E24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EC2C2EBFCE00F69E24 /* Base */; };
 		A2F110EF2C2EBFCF00F69E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EE2C2EBFCF00F69E24 /* Assets.xcassets */; };
@@ -68,11 +66,9 @@
 		A2395A522C2ECC3D00B85FF2 /* SoundsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundsController.swift; sourceTree = "<group>"; };
 		A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringBook.swift; sourceTree = "<group>"; };
-		A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewModel.swift; sourceTree = "<group>"; };
-		A24C5A3D2C493D0800533D88 /* ColoringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringView.swift; sourceTree = "<group>"; };
+		A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanelViewModel.swift; sourceTree = "<group>"; };
+		A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanelView.swift; sourceTree = "<group>"; };
 		A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewController.swift; sourceTree = "<group>"; };
-		A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanel.swift; sourceTree = "<group>"; };
-		A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColoringPanel.xib; sourceTree = "<group>"; };
 		A2F110E22C2EBFCE00F69E24 /* Milton-Coloring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milton-Coloring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A2F110EC2C2EBFCE00F69E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,8 +150,8 @@
 		A24C5A3C2C493CF800533D88 /* ColoringView */ = {
 			isa = PBXGroup;
 			children = (
-				A24C5A3D2C493D0800533D88 /* ColoringView.swift */,
-				A2400AC82C4EA4CE003B4018 /* ColoringViewModel.swift */,
+				A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */,
+				A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */,
 			);
 			path = ColoringView;
 			sourceTree = "<group>";
@@ -165,8 +161,6 @@
 			children = (
 				A24C5A3C2C493CF800533D88 /* ColoringView */,
 				A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */,
-				A2BB93D12C3FCEBD0024CCAF /* ColoringPanel.swift */,
-				A2BB93D42C4016D60024CCAF /* ColoringPanel.xib */,
 			);
 			path = Coloring;
 			sourceTree = "<group>";
@@ -282,7 +276,6 @@
 				A2F110EF2C2EBFCF00F69E24 /* Assets.xcassets in Resources */,
 				A2F110F22C2EBFCF00F69E24 /* Base in Resources */,
 				A2F110ED2C2EBFCE00F69E24 /* Base in Resources */,
-				A2BB93D52C4016D60024CCAF /* ColoringPanel.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,7 +352,7 @@
 				A2395A642C2ECC3D00B85FF2 /* AppDelegate.swift in Sources */,
 				A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */,
 				A2F110E82C2EBFCE00F69E24 /* SceneDelegate.swift in Sources */,
-				A2400AC92C4EA4CE003B4018 /* ColoringViewModel.swift in Sources */,
+				A2400AC92C4EA4CE003B4018 /* ColoringPanelViewModel.swift in Sources */,
 				A2395A592C2ECC3D00B85FF2 /* Extensions.swift in Sources */,
 				A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */,
 				A2395A6B2C2ECC3D00B85FF2 /* PurchasesController.swift in Sources */,
@@ -371,9 +364,8 @@
 				A2395A662C2ECC3D00B85FF2 /* AppsFlyerController.swift in Sources */,
 				A2395A692C2ECC3D00B85FF2 /* ExperimentsController.swift in Sources */,
 				A2395A572C2ECC3D00B85FF2 /* StatisticsViewController.swift in Sources */,
-				A24C5A3E2C493D0800533D88 /* ColoringView.swift in Sources */,
+				A24C5A3E2C493D0800533D88 /* ColoringPanelView.swift in Sources */,
 				A2395A682C2ECC3D00B85FF2 /* Constraints.swift in Sources */,
-				A2BB93D22C3FCEBD0024CCAF /* ColoringPanel.swift in Sources */,
 				A2395A582C2ECC3D00B85FF2 /* MainMenuViewController.swift in Sources */,
 				A2395A612C2ECC3D00B85FF2 /* Translation.swift in Sources */,
 				A2395A552C2ECC3D00B85FF2 /* SettingsViewController.swift in Sources */,

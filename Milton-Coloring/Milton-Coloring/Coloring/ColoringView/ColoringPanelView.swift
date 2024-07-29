@@ -1,5 +1,5 @@
 //
-//  ColoringView.swift
+//  ColoringPanelView.swift
 //  Milton-Coloring
 //
 //  Created by Stefanita Oaca on 18.07.2024.
@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct ColoringView: View {
+struct ColoringPanelView: View {
     
-    @ObservedObject var viewModel: ColoringViewModel
+    @ObservedObject var viewModel: ColoringPanelViewModel
     
     var body: some View {
         ZStack{
@@ -260,5 +260,5 @@ struct ColoringView: View {
 }
 
 #Preview {
-    ColoringView(viewModel: ColoringViewModel())
+    ColoringPanelView(viewModel: ColoringPanelViewModel())
 }

@@ -1,5 +1,5 @@
 //
-//  ColoringViewModel.swift
+//  ColoringPanelViewModel.swift
 //  Milton-Coloring
 //
 //  Created by Stefanita Oaca on 22.07.2024.
@@ -13,7 +13,7 @@ enum ColoringPanelType: Int{
     case dippers
 }
 
-class ColoringViewModel: ObservableObject {
+class ColoringPanelViewModel: ObservableObject {
     
     @Published var colorinPanelType:ColoringPanelType = .regular
     

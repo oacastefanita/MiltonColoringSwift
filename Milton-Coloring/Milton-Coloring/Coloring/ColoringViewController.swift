@@ -32,7 +32,7 @@ class ColoringViewController: UIViewController {
     }
     
     func addColoringPanel(){
-        let childView = UIHostingController(rootView: ColoringView(viewModel: ColoringViewModel()))
+        let childView = UIHostingController(rootView: ColoringPanelView(viewModel: ColoringPanelViewModel()))
         addChild(childView)
         childView.view.frame = coloringPanelContainer.bounds
         coloringPanelContainer.addConstrained(subview: childView.view)

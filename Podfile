@@ -25,6 +25,7 @@ target 'Milton-Coloring' do
     pod 'DevCycle', '~> 1.8.0'
     pod "AlignedCollectionViewFlowLayout"
     pod 'Bugsee'
+    pod 'TouchDraw'
 end
 
 

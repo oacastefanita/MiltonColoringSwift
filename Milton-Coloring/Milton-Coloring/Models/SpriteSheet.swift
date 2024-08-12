@@ -59,7 +59,6 @@ class SpriteSheet{
                         if let frame = frames[key] as? Dictionary<String, Any>{
                             if let textureRect = frame["textureRect"] as? String, let rotated = frame["textureRotated"] as? Bool{
                                 let rect = newSpriteSheet.getRectFromString(textureRect, rotated: rotated)
-                                print(rect)
                                 var cropped = newSpriteSheet.cropImage(imageToCrop: image, toRect: rect)
                                 if rotated{
                                     cropped = cropped.rotate(radians: -.pi/2)!
@@ -67,7 +66,6 @@ class SpriteSheet{
                                 newSpriteSheet.images[key] = cropped
                             }else if let textureRect = frame["frame"] as? String, let rotated = frame["rotated"] as? Bool{
                                 let rect = newSpriteSheet.getRectFromString(textureRect, rotated: rotated)
-                                print(rect)
                                 var cropped = newSpriteSheet.cropImage(imageToCrop: image, toRect: rect)
                                 if rotated{
                                     cropped = cropped.rotate(radians: -.pi/2)!

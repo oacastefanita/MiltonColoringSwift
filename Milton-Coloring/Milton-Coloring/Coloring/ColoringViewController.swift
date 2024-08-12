@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import TouchDraw
 
 class ColoringViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
@@ -29,6 +30,7 @@ class ColoringViewController: UIViewController {
         
         loadButtons()
         addColoringPanel()
+        addColoringLayers()
     }
     
     func addColoringPanel(){
@@ -49,5 +51,36 @@ class ColoringViewController: UIViewController {
     @objc func onClose() {
         SoundsController.sharedInstance.playMenuSound()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    func addColoringLayers() {
+        for (index, item) in coloringBook.items.enumerated(){
+            let subview = addColorableView(using: item, superView: self.view)
+        }
+    }
+    
+    func addColorableView(using item:ColoringBookItem, superView: UIView) -> UIImageView{
+        let aspect = AssetsManager.sharedInstance.coloringDesignSize.width / AssetsManager.sharedInstance.coloringDesignSize.height
+        
+        let subview = UIImageView(frame: CGRectZero)
+        
+        subview.image = item.texture
+        subview.contentMode = .scaleToFill
+        subview.translatesAutoresizingMaskIntoConstraints = false
+        subview.isUserInteractionEnabled = true
+        
+        superView.addSubview(subview)
+        let x = self.view.frame.size.height * aspect * item.position.x
+        let y = self.view.frame.size.height * item.position.y
+        let w = self.view.frame.size.height * aspect * item.size.width
+        let h = self.view.frame.size.height * item.size.height
+                
+        subview.leftAnchor.constraint(equalTo: superView.leftAnchor, constant: x).isActive = true
+        subview.topAnchor.constraint(equalTo: superView.topAnchor, constant: y).isActive = true
+
+        subview.widthAnchor.constraint(equalToConstant: w).isActive = true
+        subview.heightAnchor.constraint(equalToConstant: h).isActive = true
+        
+        return subview
     }
 }

@@ -147,19 +147,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		A24C5A3C2C493CF800533D88 /* ColoringView */ = {
+		A24C5A3C2C493CF800533D88 /* ColoringPanel */ = {
 			isa = PBXGroup;
 			children = (
 				A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */,
 				A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */,
 			);
-			path = ColoringView;
+			path = ColoringPanel;
 			sourceTree = "<group>";
 		};
 		A2BB93D32C4016BD0024CCAF /* Coloring */ = {
 			isa = PBXGroup;
 			children = (
-				A24C5A3C2C493CF800533D88 /* ColoringView */,
+				A24C5A3C2C493CF800533D88 /* ColoringPanel */,
 				A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */,
 			);
 			path = Coloring;

@@ -166,7 +166,6 @@ class MainMenuViewController: UIViewController {
         SoundsController.sharedInstance.playMenuSound()
         self.performSegue(withIdentifier: "SettingsFromMainMenu", sender: self)
     }
-    
 }
 
 extension MainMenuViewController: UICollectionViewDelegate, UICollectionViewDataSource{

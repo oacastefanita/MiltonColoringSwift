@@ -28,9 +28,9 @@ class ColoringViewController: UIViewController {
         self.backgroundImage.backgroundColor = .white
         self.backgroundImage.image = coloringBook.icon
         
-        loadButtons()
         addColoringPanel()
         addColoringLayers()
+        loadButtons()
     }
     
     func addColoringPanel(){
@@ -59,13 +59,10 @@ class ColoringViewController: UIViewController {
         }
     }
     
-    func addColorableView(using item:ColoringBookItem, superView: UIView) -> UIImageView{
+    func addColorableView(using item:ColoringBookItem, superView: UIView) -> ColorableView{
         let aspect = AssetsManager.sharedInstance.coloringDesignSize.width / AssetsManager.sharedInstance.coloringDesignSize.height
         
-        let subview = UIImageView(frame: CGRectZero)
-        
-        subview.image = item.texture
-        subview.contentMode = .scaleToFill
+        let subview = ColorableView(frame: CGRectZero, image: item.texture!)
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.isUserInteractionEnabled = true
         

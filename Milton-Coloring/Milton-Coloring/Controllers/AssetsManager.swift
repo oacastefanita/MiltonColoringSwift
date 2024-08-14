@@ -25,7 +25,7 @@ class AssetsManager: NSObject {
     var booksMetadata =  Dictionary<String, Any>()
     var coloringBooks = [ColoringBook]()
     
-    let coloringDesignSize = CGSize(width: 1719.0, height: 1536.0)
+    let coloringDesignSize = CGSize(width: 1719.0, height: 1536.0)//1723
     
     //MARK: Download
     func loadFileFromLocalPath(_ localFilePath: String) ->Data? {

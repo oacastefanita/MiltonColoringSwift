@@ -86,6 +86,7 @@ class ColoringBook {
                 let positionsArray = positionsString.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").components(separatedBy: ",")
                 if positionsArray.count == 4{
                     let notZero = 0.00000001
+                    print(positionsArray)
                     let posX = (Double(positionsArray[0]) ?? notZero ) / AssetsManager.sharedInstance.coloringDesignSize.width
                     let posY = (Double(positionsArray[1]) ?? notZero ) / AssetsManager.sharedInstance.coloringDesignSize.height
                     let width = (Double(positionsArray[2]) ?? notZero ) / AssetsManager.sharedInstance.coloringDesignSize.width
@@ -96,22 +97,6 @@ class ColoringBook {
                 }
             }
         }
-        
-//        var posX = 1719.0 * 0.0 / AssetsManager.sharedInstance.coloringDesignSize.width
-//        var posY = 1536.0 * 0.0 / AssetsManager.sharedInstance.coloringDesignSize.height
-//        var width = 1719.0 * 0.25 / AssetsManager.sharedInstance.coloringDesignSize.width
-//        var height = 1536.0 * 0.25 / AssetsManager.sharedInstance.coloringDesignSize.height
-//
-//        var item = ColoringBookItem(texture: UIImage(named: ""), position: CGPoint(x: posX, y: posY), size: CGSize(width: width, height: height))
-//        self.items.append(item)
-//        
-//        posX = 1719.0 * 0.75 / AssetsManager.sharedInstance.coloringDesignSize.width
-//        posY = 1536.0 * 0.75 / AssetsManager.sharedInstance.coloringDesignSize.height
-//        width = 1719.0 * 0.25 / AssetsManager.sharedInstance.coloringDesignSize.width
-//        height = 1536.0 * 0.25 / AssetsManager.sharedInstance.coloringDesignSize.height
-//        
-//        item = ColoringBookItem(texture: UIImage(named: ""), position: CGPoint(x: posX, y: posY), size: CGSize(width: width, height: height))
-//        self.items.append(item)
     }
 }
 

@@ -32,6 +32,7 @@
 		A2395A6D2C2ECC3D00B85FF2 /* StatisticsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */; };
 		A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */; };
 		A2400AC92C4EA4CE003B4018 /* ColoringPanelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */; };
+		A2417FEC2C76355400E89451 /* PassThroughImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2417FEB2C76355400E89451 /* PassThroughImageView.swift */; };
 		A24C5A3E2C493D0800533D88 /* ColoringPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */; };
 		A2B641132C6A16AD00BDAB56 /* ColorableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B641122C6A16AD00BDAB56 /* ColorableView.swift */; };
 		A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */; };
@@ -68,6 +69,7 @@
 		A2395A532C2ECC3D00B85FF2 /* StatisticsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsController.swift; sourceTree = "<group>"; };
 		A2395A6E2C32D4CA00B85FF2 /* ColoringBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringBook.swift; sourceTree = "<group>"; };
 		A2400AC82C4EA4CE003B4018 /* ColoringPanelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanelViewModel.swift; sourceTree = "<group>"; };
+		A2417FEB2C76355400E89451 /* PassThroughImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassThroughImageView.swift; sourceTree = "<group>"; };
 		A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanelView.swift; sourceTree = "<group>"; };
 		A2B641122C6A16AD00BDAB56 /* ColorableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorableView.swift; sourceTree = "<group>"; };
 		A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A2395A3C2C2ECC3C00B85FF2 /* Extensions.swift */,
+				A2417FEB2C76355400E89451 /* PassThroughImageView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 				A2395A662C2ECC3D00B85FF2 /* AppsFlyerController.swift in Sources */,
 				A2395A692C2ECC3D00B85FF2 /* ExperimentsController.swift in Sources */,
 				A2395A572C2ECC3D00B85FF2 /* StatisticsViewController.swift in Sources */,
+				A2417FEC2C76355400E89451 /* PassThroughImageView.swift in Sources */,
 				A24C5A3E2C493D0800533D88 /* ColoringPanelView.swift in Sources */,
 				A2B641132C6A16AD00BDAB56 /* ColorableView.swift in Sources */,
 				A2395A682C2ECC3D00B85FF2 /* Constraints.swift in Sources */,

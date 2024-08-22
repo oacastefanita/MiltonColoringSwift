@@ -162,7 +162,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oPX-NQ-KD3">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oPX-NQ-KD3" customClass="PassThroughImageView" customModule="Milton_Coloring" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="917.5" height="820"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oPX-NQ-KD3" secondAttribute="height" multiplier="1719:1536" id="cQv-xw-7Yh"/>

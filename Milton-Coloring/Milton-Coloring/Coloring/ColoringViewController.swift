@@ -10,7 +10,7 @@ import SwiftUI
 import TouchDraw
 
 class ColoringViewController: UIViewController {
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var backgroundImage: PassThroughImageView!
     @IBOutlet weak var coloringPanelContainer: UIView!
     
     var coloringBook: ColoringBook!
@@ -25,14 +25,16 @@ class ColoringViewController: UIViewController {
     }
     
     func initView(){
-        self.backgroundImage.backgroundColor = .white
+        addColoringLayers()
+        
+        self.backgroundImage.backgroundColor = .clear
         self.backgroundImage.image = coloringBook.icon
+        self.view.bringSubviewToFront(self.backgroundImage)
         
         addColoringPanel()
-        addColoringLayers()
         loadButtons()
     }
-    
+        
     func addColoringPanel(){
         let childView = UIHostingController(rootView: ColoringPanelView(viewModel: ColoringPanelViewModel()))
         addChild(childView)

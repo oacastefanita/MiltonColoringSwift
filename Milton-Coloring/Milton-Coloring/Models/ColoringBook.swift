@@ -67,9 +67,7 @@ class ColoringBook {
             completion(success)
         })
     }
-    
-    
-    
+        
     func loadColoringLayersData(){
         let fileURL = documentsDirectory.appendingPathComponent("Milton/coloringbooks/coloringBooksLayers").appendingPathComponent(self.positionsFileName)
         guard let dict = NSDictionary(contentsOfFile: fileURL.path) else {
@@ -80,8 +78,15 @@ class ColoringBook {
         }
         
         layersMetadata = dict.swiftDictionary["frames"] as! [String: Any]
+        var array = Array(layersMetadata.keys) as [String]
+        array = array.sorted(by: {
+            let left = $0.replacingOccurrences(of: ".png", with: "")
+            let right = $1.replacingOccurrences(of: ".png", with: "")
+            return Int(left.components(separatedBy: "_").last!)! < Int(right.components(separatedBy: "_").last!)!
+        })
+        print(array)
         
-        for keyName in layersMetadata.keys{
+        for keyName in array{
             if let dict = layersMetadata[keyName] as? [String: Any], let positionsString = dict["frame"] as? String{
                 let positionsArray = positionsString.replacingOccurrences(of: "{", with: "").replacingOccurrences(of: "}", with: "").components(separatedBy: ",")
                 if positionsArray.count == 4{

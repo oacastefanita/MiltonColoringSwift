@@ -33,9 +33,6 @@ class ColorableView: UIView {
         let firstPoint = touch.location(in: self)
         lineArray.append([CGPoint]())
         lineArray[lineArray.count - 1].append(firstPoint)
-        
-        self.layer.borderWidth = 3
-        self.layer.borderColor = UIColor.red.cgColor
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -45,15 +42,10 @@ class ColorableView: UIView {
         setNeedsDisplay()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.layer.borderWidth = 0
-    }
-
     override func draw(_ rect: CGRect) {
         
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(UIColor.white.cgColor)
-//        context?.setBlendMode(.sourceIn)
         
         context?.setLineWidth(50)
         context?.setStrokeColor(UIColor.yellow.cgColor)

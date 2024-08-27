@@ -258,7 +258,3 @@ struct ColoringPanelView: View {
         .ignoresSafeArea()
     }
 }
-
-#Preview {
-    ColoringPanelView(viewModel: ColoringPanelViewModel())
-}

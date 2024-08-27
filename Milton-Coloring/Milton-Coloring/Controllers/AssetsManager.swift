@@ -548,6 +548,15 @@ class AssetsManager: NSObject {
         }
     }
     
+    func getPatternColor(named: String) -> UIColor{
+        let path = documentsDirectory.path + "/Milton/coloringbooks/patterns/" + named
+        if let image = UIImage(contentsOfFile: path){
+            return UIColor(patternImage: image)
+        }
+        
+        return UIColor.clear
+    }
+    
     func getColoringPanelBackgroundImage() -> UIImage{
         if let found = self.coloringPanelSpriteSheet["right_panel.png"]{
             return found

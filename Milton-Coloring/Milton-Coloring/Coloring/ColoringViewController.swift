@@ -9,7 +9,7 @@ import UIKit
 import SwiftUI
 import TouchDraw
 
-class ColoringViewController: UIViewController {
+class ColoringViewController: UIViewController, ColoringPanelDelegate {
     @IBOutlet weak var backgroundImage: PassThroughImageView!
     @IBOutlet weak var coloringPanelContainer: UIView!
     
@@ -36,7 +36,7 @@ class ColoringViewController: UIViewController {
     }
         
     func addColoringPanel(){
-        let childView = UIHostingController(rootView: ColoringPanelView(viewModel: ColoringPanelViewModel()))
+        let childView = UIHostingController(rootView: ColoringPanelView(viewModel: ColoringPanelViewModel(delegate: self)))
         addChild(childView)
         childView.view.frame = coloringPanelContainer.bounds
         coloringPanelContainer.addConstrained(subview: childView.view)
@@ -61,10 +61,14 @@ class ColoringViewController: UIViewController {
         }
     }
     
-    func addColorableView(using item:ColoringBookItem, superView: UIView) -> ColorableView{
+    func addColorableView(using item:ColoringBookItem, superView: UIView) -> MaskedView{
         let aspect = AssetsManager.sharedInstance.coloringDesignSize.width / AssetsManager.sharedInstance.coloringDesignSize.height
         
-        let subview = ColorableView(frame: CGRectZero, image: item.texture!)
+//        let subview = ColorableView(frame: CGRectZero, image: item.texture!)
+//        let subview = RevealImageView(frame: CGRectZero)
+//        subview.backgroundColor = AssetsManager.sharedInstance.getPatternColor(named: "clouds")
+        
+        let subview = MaskedView(frame: CGRectZero, image: item.texture!)
         subview.translatesAutoresizingMaskIntoConstraints = false
         subview.isUserInteractionEnabled = true
         
@@ -81,5 +85,11 @@ class ColoringViewController: UIViewController {
         subview.heightAnchor.constraint(equalToConstant: h).isActive = true
         
         return subview
+    }
+    
+    func didChangeColoringSelection(type: ColoringType, color: UIColor?, pattern: UIColor?) {
+        for view in self.view.subviews{
+            (view as? MaskedView)?.coloringSelectionChanged(type: type, color: color, pattern: pattern)
+        }
     }
 }

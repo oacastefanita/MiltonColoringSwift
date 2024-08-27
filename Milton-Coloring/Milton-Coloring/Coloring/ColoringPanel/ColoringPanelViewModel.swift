@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+protocol ColoringPanelDelegate{
+    func didChangeColoringSelection(type: ColoringType, color:UIColor?, pattern: UIColor?)
+}
+
 enum ColoringPanelType: Int{
     case regular = 0
     case patterns
@@ -28,7 +32,9 @@ class ColoringPanelViewModel: ObservableObject {
     @Published var moreButton: UIImage
     @Published var doneButton: UIImage
     
-    init() {
+    var delegate: ColoringPanelDelegate
+    
+    init(delegate: ColoringPanelDelegate) {
         backgroundImage = AssetsManager.sharedInstance.getColoringPanelBackgroundImage()
         foregroundImage = AssetsManager.sharedInstance.getColoringPanelForegroundImage()
         eraserImage = AssetsManager.sharedInstance.getColoringPanelEraserButtonImage()
@@ -36,6 +42,9 @@ class ColoringPanelViewModel: ObservableObject {
         patternsButton = AssetsManager.sharedInstance.getColoringPanelPatternButtonImage()
         moreButton = AssetsManager.sharedInstance.getColoringPanelMoreButtonImage()
         doneButton = AssetsManager.sharedInstance.getColoringPanelDoneButtonImage()
+        
+        self.delegate = delegate
+        callDelegate()
     }
     
     func getCrayons() -> [UIImage]{
@@ -89,22 +98,49 @@ class ColoringPanelViewModel: ObservableObject {
             selectedDipper = -1
         case .patterns:
             colorinPanelType = .dippers
-            selectedCrayon = 1
-            selectedDipper = -1
-        case .dippers:
-            colorinPanelType = .regular
             selectedCrayon = -1
             selectedDipper = 0
+        case .dippers:
+            colorinPanelType = .regular
+            selectedCrayon = 1
+            selectedDipper = -1
         }
+        
+        callDelegate()
     }
     
     func selectedCrayon(_ index: Int){
         selectedCrayon = index
         selectedDipper = -1
+        
+        callDelegate()
     }
     
     func selectedDipper(_ index: Int){
         selectedCrayon = -1
         selectedDipper = index
+        
+        callDelegate()
+    }
+    
+    func callDelegate(){
+        switch colorinPanelType {
+        case .regular:
+            if selectedCrayon != -1{
+                delegate.didChangeColoringSelection(type: .crayon, color: AssetsManager.sharedInstance.colorsList[selectedCrayon - 1], pattern: nil)
+            }else if selectedDipper != -1{
+                delegate.didChangeColoringSelection(type: .dippers, color: AssetsManager.sharedInstance.colorsList[selectedDipper - 1], pattern: nil)
+            }
+        case .patterns:
+            if selectedCrayon != -1{
+                delegate.didChangeColoringSelection(type: .crayon, color: nil, pattern: AssetsManager.sharedInstance.getPatternColor(named: AssetsManager.sharedInstance.patternNames[selectedCrayon - 1]))
+            }else if selectedDipper != -1{
+                delegate.didChangeColoringSelection(type: .dippers, color: nil, pattern: AssetsManager.sharedInstance.getPatternColor(named: AssetsManager.sharedInstance.patternNames[selectedDipper - 1]))
+            }
+        case .dippers:
+            if selectedDipper != -1{
+                delegate.didChangeColoringSelection(type: .dippers, color: AssetsManager.sharedInstance.moreColorsList[selectedDipper], pattern: nil)
+            }
+        }
     }
 }

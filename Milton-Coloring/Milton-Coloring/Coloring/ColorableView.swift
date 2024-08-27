@@ -7,25 +7,21 @@
 
 import UIKit
 
+let coloringStrokeSize: CGFloat = 20
+
 class ColorableView: UIView {
 
     var lineArray: [[CGPoint]] = [[CGPoint]]()
-    var image: UIImage!
-    
-    private var imageMaskView = UIImageView()
-    
-    init(frame: CGRect, image: UIImage) {
-        super.init(frame: frame)
-        self.image = image
-        self.backgroundColor = UIColor.white
-    }
+    var currentColor: CGColor = UIColor.random.cgColor
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        self.backgroundColor = UIColor.clear
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        self.backgroundColor = UIColor.clear
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -47,8 +43,8 @@ class ColorableView: UIView {
         let context = UIGraphicsGetCurrentContext()
         context?.setFillColor(UIColor.white.cgColor)
         
-        context?.setLineWidth(50)
-        context?.setStrokeColor(UIColor.yellow.cgColor)
+        context?.setLineWidth(coloringStrokeSize)
+        context?.setStrokeColor(currentColor)
         context?.setLineCap(.round)
         
         for line in lineArray {
@@ -60,12 +56,5 @@ class ColorableView: UIView {
             }
             context?.strokePath()
         }
-        
-        let mask = CALayer()
-        mask.frame = rect
-        mask.contents = image.cgImage!
-
-        self.layer.mask = mask
-        self.layer.masksToBounds = true
     }
 }

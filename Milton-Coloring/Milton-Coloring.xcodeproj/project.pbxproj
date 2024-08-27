@@ -36,6 +36,8 @@
 		A24C5A3E2C493D0800533D88 /* ColoringPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */; };
 		A2B641132C6A16AD00BDAB56 /* ColorableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2B641122C6A16AD00BDAB56 /* ColorableView.swift */; };
 		A2BB93D02C3FCE910024CCAF /* ColoringViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */; };
+		A2D7FB172C7CA96600E16E1C /* RevealImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7FB162C7CA96600E16E1C /* RevealImageView.swift */; };
+		A2D7FB192C7DBDF300E16E1C /* MaskedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2D7FB182C7DBDF300E16E1C /* MaskedView.swift */; };
 		A2F110E82C2EBFCE00F69E24 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */; };
 		A2F110ED2C2EBFCE00F69E24 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EC2C2EBFCE00F69E24 /* Base */; };
 		A2F110EF2C2EBFCF00F69E24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2F110EE2C2EBFCF00F69E24 /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		A24C5A3D2C493D0800533D88 /* ColoringPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringPanelView.swift; sourceTree = "<group>"; };
 		A2B641122C6A16AD00BDAB56 /* ColorableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorableView.swift; sourceTree = "<group>"; };
 		A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColoringViewController.swift; sourceTree = "<group>"; };
+		A2D7FB162C7CA96600E16E1C /* RevealImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevealImageView.swift; sourceTree = "<group>"; };
+		A2D7FB182C7DBDF300E16E1C /* MaskedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskedView.swift; sourceTree = "<group>"; };
 		A2F110E22C2EBFCE00F69E24 /* Milton-Coloring.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Milton-Coloring.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F110E72C2EBFCE00F69E24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A2F110EC2C2EBFCE00F69E24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -167,6 +171,8 @@
 				A24C5A3C2C493CF800533D88 /* ColoringPanel */,
 				A2BB93CF2C3FCE910024CCAF /* ColoringViewController.swift */,
 				A2B641122C6A16AD00BDAB56 /* ColorableView.swift */,
+				A2D7FB162C7CA96600E16E1C /* RevealImageView.swift */,
+				A2D7FB182C7DBDF300E16E1C /* MaskedView.swift */,
 			);
 			path = Coloring;
 			sourceTree = "<group>";
@@ -354,6 +360,7 @@
 				A2395A6A2C2ECC3D00B85FF2 /* InAppPurchases.swift in Sources */,
 				A2395A652C2ECC3D00B85FF2 /* AnalyticsController.swift in Sources */,
 				A2395A6C2C2ECC3D00B85FF2 /* SoundsController.swift in Sources */,
+				A2D7FB172C7CA96600E16E1C /* RevealImageView.swift in Sources */,
 				A2395A6D2C2ECC3D00B85FF2 /* StatisticsController.swift in Sources */,
 				A2395A642C2ECC3D00B85FF2 /* AppDelegate.swift in Sources */,
 				A2395A6F2C32D4CA00B85FF2 /* ColoringBook.swift in Sources */,
@@ -376,6 +383,7 @@
 				A2395A682C2ECC3D00B85FF2 /* Constraints.swift in Sources */,
 				A2395A582C2ECC3D00B85FF2 /* MainMenuViewController.swift in Sources */,
 				A2395A612C2ECC3D00B85FF2 /* Translation.swift in Sources */,
+				A2D7FB192C7DBDF300E16E1C /* MaskedView.swift in Sources */,
 				A2395A552C2ECC3D00B85FF2 /* SettingsViewController.swift in Sources */,
 				A2395A5B2C2ECC3D00B85FF2 /* Animation.swift in Sources */,
 				A2395A562C2ECC3D00B85FF2 /* SplashViewController.swift in Sources */,

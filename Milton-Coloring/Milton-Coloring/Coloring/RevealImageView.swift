@@ -12,6 +12,11 @@ class RevealImageView: UIImageView {
     private var maskPath = UIBezierPath()
     private var maskLayer: CAShapeLayer = CAShapeLayer()
     
+    var lineArray: [[CGPoint]] = [[CGPoint]]()
+    
+    var coloringType: ColoringType = .crayon
+    var isEmpty = true
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -21,17 +26,13 @@ class RevealImageView: UIImageView {
         commonInit()
     }
     func commonInit() -> Void {
-        // default is false for UIImageView
         isUserInteractionEnabled = true
-        // we only want to stroke the path, not fill it
-        maskLayer.fillColor = UIColor.clear.cgColor
-        // any color will work, as the mask uses the alpha value
+        
         maskLayer.strokeColor = UIColor.white.cgColor
-        // adjust drawing-line-width as desired
         maskLayer.lineWidth = coloringStrokeSize
         maskLayer.lineCap = .round
         maskLayer.lineJoin = .round
-        // set the mask layer
+        
         layer.mask = maskLayer
     }
     override func layoutSubviews() {
@@ -39,19 +40,48 @@ class RevealImageView: UIImageView {
         maskLayer.frame = bounds
     }
     
+    func animateFillFromPoint(_ point: CGPoint){
+        lineArray[lineArray.count - 1].append(point)
+        let width = CGFloat(lineArray.last?.count ?? 0) * CGFloat(lineArray.last?.count ?? 0) * coloringStrokeSize / 2.6
+        let path = UIBezierPath(ovalIn: CGRect(x: point.x - width / 2, y: point.y - width / 2, width: width, height: width))
+        maskLayer.fillColor = UIColor.white.cgColor
+        maskLayer.path = path.cgPath
+        setNeedsDisplay()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.01) {
+            if self.lineArray.last?.count ?? 20 < 20{
+                self.animateFillFromPoint(point)
+            }else{
+                
+            }
+        }
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let currentPoint = touch.location(in: self)
-        maskPath.move(to: currentPoint)
+        if coloringType == .crayon{
+            maskLayer.fillColor = UIColor.clear.cgColor
+            
+            maskPath.move(to: currentPoint)
+        }else{
+            lineArray.append([CGPoint]())
+            animateFillFromPoint(currentPoint)
+        }
+        
+        isEmpty = false
     }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
         let currentPoint = touch.location(in: self)
-        // add line to on maskPath
-        maskPath.addLine(to: currentPoint)
-        // update the mask layer path
-        maskLayer.path = maskPath.cgPath
+        if coloringType == .crayon{
+            maskPath.addLine(to: currentPoint)
+            maskLayer.path = maskPath.cgPath
+        }else{
+            
+        }
+        
     }
     
 }

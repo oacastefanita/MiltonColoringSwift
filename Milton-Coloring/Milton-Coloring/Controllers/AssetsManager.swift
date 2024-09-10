@@ -490,7 +490,7 @@ class AssetsManager: NSObject {
     var patternNames: [String] = []
     var coloringPanelSpriteSheet: SpriteSheet!
     
-    let colorsList: [UIColor] = [
+    var colorsList: [UIColor] = [
         UIColor(red: 224.0/255.0, green: 46.0/255.0, blue: 146.0/255.0, alpha: 1.0),
         UIColor(red: 167.0/255.0, green: 46.0/255.0, blue: 224.0/255.0, alpha: 1.0),
         UIColor(red: 28.0/255.0, green: 142.0/255.0, blue: 238.0/255.0, alpha: 1.0),
@@ -500,7 +500,7 @@ class AssetsManager: NSObject {
         UIColor(red: 224.0/255.0, green: 46.0/255.0, blue: 46.0/255.0, alpha: 1.0)
     ]
 
-    let moreColorsList: [UIColor] = [
+    var moreColorsList: [UIColor] = [
         UIColor(red: 0.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0),
         UIColor(red: 255.0/255.0, green: 0.0/255.0, blue: 255.0/255.0, alpha: 1.0),
         UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 0.0/255.0, alpha: 1.0),

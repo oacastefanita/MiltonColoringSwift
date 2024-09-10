@@ -40,12 +40,22 @@ class MaskedView: UIView {
         self.currentColor = color
         self.currentPattern = pattern
         
+        for view in self.subviews{
+            if let colorable = view as? ColorableView, colorable.isEmpty{
+                colorable.removeFromSuperview()
+            }else if let reveal = view as? RevealImageView, reveal.isEmpty{
+                reveal.removeFromSuperview()
+            }
+        }
+        
         if currentPattern == nil{
             let newView = ColorableView(frame: CGRectZero)
             newView.currentColor = self.currentColor!.cgColor
+            newView.coloringType = type
             self.addConstrained(subview: newView)
         }else{
             let newView = RevealImageView(frame: CGRectZero)
+            newView.coloringType = type
             newView.backgroundColor = pattern
             self.addConstrained(subview: newView)
         }

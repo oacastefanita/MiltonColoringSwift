@@ -99,7 +99,7 @@ class ColoringPanelViewModel: ObservableObject {
         case .patterns:
             colorinPanelType = .dippers
             selectedCrayon = -1
-            selectedDipper = 0
+            selectedDipper = -1
         case .dippers:
             colorinPanelType = .regular
             selectedCrayon = 1
@@ -117,6 +117,17 @@ class ColoringPanelViewModel: ObservableObject {
     }
     
     func selectedDipper(_ index: Int){
+        if colorinPanelType == .dippers{
+            AssetsManager.sharedInstance.colorsList.insert(AssetsManager.sharedInstance.moreColorsList[index], at: 0)
+            if let last = AssetsManager.sharedInstance.colorsList.last{
+                AssetsManager.sharedInstance.moreColorsList.remove(at: index)
+                AssetsManager.sharedInstance.moreColorsList.insert(last, at: 0)
+                AssetsManager.sharedInstance.colorsList.removeLast()
+            }
+            changeMode()
+            return
+        }
+        
         selectedCrayon = -1
         selectedDipper = index
         

@@ -69,4 +69,44 @@ class MaskedView: UIView {
         self.layer.mask = mask
         self.layer.masksToBounds = true
     }
+    
+    override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
+        // Convert the touch point to the coordinate system of the mask image
+        let maskBounds = self.bounds
+        let maskSize = maskImage.size
+        
+        let scaleX = maskSize.width / maskBounds.width
+        let scaleY = maskSize.height / maskBounds.height
+        
+        let pointInMask = CGPoint(x: point.x * scaleX, y: point.y * scaleY)
+        
+        // Check if the point is within the mask image's bounds
+        if pointInMask.x < 0 || pointInMask.x >= maskImage.size.width || pointInMask.y < 0 || pointInMask.y >= maskImage.size.height {
+            return false
+        }
+        
+        // Get the pixel data of the mask image at the touch point
+        guard let cgImage = maskImage.cgImage,
+              let dataProvider = cgImage.dataProvider,
+              let pixelData = dataProvider.data else {
+            return false
+        }
+        
+        let data = CFDataGetBytePtr(pixelData)
+        
+        let bytesPerRow = cgImage.bytesPerRow
+        let numberOfComponents = cgImage.bitsPerPixel / 8
+        
+        let x = Int(pointInMask.x)
+        let y = Int(pointInMask.y)
+        
+        let pixelIndex = y * bytesPerRow + x * numberOfComponents
+        
+        // The alpha component is usually the last component in the pixel data
+        let alpha = data?[pixelIndex + 3] ?? 0
+        
+        // If alpha is greater than 0, the touch is within the mask
+        return alpha > 0
+    }
+
 }

@@ -25,7 +25,7 @@ class StatisticsViewController: UIViewController {
         super.viewWillAppear(animated)
         
         lblStatistics.textColor = AssetsManager.sharedInstance.getStatisticsFontColor()
-        lblStatistics.text = "Your child has entered \(StatisticsController.shared.numberOfSessions) coloring books out of which he completed \(StatisticsController.shared.numberOfCompletedSessions) \n The total time spent coloring is \(StatisticsController.shared.totalSessionDurationInMin) mins averaging \(StatisticsController.shared.averageSessionDurationInMin) mins per book"
+        lblStatistics.text = "Your child has entered \(StatisticsController.shared.numberOfSessions) coloring books \n The total time spent coloring is \(StatisticsController.shared.totalSessionDurationInMin) mins averaging \(StatisticsController.shared.averageSessionDurationInMin) mins per book"
         loadButtons()
     }
     

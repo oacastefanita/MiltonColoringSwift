@@ -15,13 +15,24 @@ class ColoringViewController: UIViewController, ColoringPanelDelegate {
     
     var coloringBook: ColoringBook!
     
+    var startDate: Date!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startDate = Date()
+        StatisticsController.shared.addEvent(StatisticEntry(eventType: .bookStarted))
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         initView()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        StatisticsController.shared.addEvent(StatisticEntry(eventType: .bookClosed, duration: Date().timeIntervalSince(startDate)))
     }
     
     func initView(){

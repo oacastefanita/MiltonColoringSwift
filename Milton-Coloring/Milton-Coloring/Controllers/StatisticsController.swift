@@ -76,11 +76,10 @@ class StatisticsController: NSObject {
         numberOfSessions = entriesList.filter { $0.eventType == .bookStarted }.count
         numberOfCompletedSessions = entriesList.filter { $0.eventType == .bookCompleted }.count
         
-        let completedEntries = entriesList.filter { $0.eventType == .bookCompleted && $0.duration != nil }
-        let closedEntries = entriesList.filter { $0.eventType == .bookClosed && $0.duration != nil }
-        totalSessionDuration = completedEntries.reduce(0.0) { $0 + ($1.duration ?? 0.0) } + closedEntries.reduce(0.0) { $0 + ($1.duration ?? 0.0) }
+        let closedEntries = entriesList.filter { $0.eventType == .bookClosed}
+        totalSessionDuration = closedEntries.reduce(0.0) { $0 + ($1.duration ?? 0.0) }
         
-        let totalEntriesCount = Double(completedEntries.count + closedEntries.count)
+        let totalEntriesCount = Double(closedEntries.count)
         averageSessionDuration = totalEntriesCount == 0 ? 0 : totalSessionDuration / totalEntriesCount
     }
     
